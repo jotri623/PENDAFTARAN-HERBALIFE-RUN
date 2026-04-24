@@ -146,6 +146,46 @@ h1 span { color: var(--primary); }
   .event-info { grid-template-columns:1fr; }
   .countdown { grid-template-columns:repeat(2,1fr); }
 }
+  .categories{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  margin:40px auto;
+  max-width:800px;
+}
+
+.box{
+  background:#1e293b;
+  padding:25px;
+  width:130px;
+  border-radius:15px;
+  cursor:pointer;
+  transition:0.3s;
+  box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.box:hover{
+  transform:translateY(-5px);
+  background:#334155;
+}
+
+.box.active{
+  background:#22c55e;
+  color:#000;
+  transform:scale(1.05);
+}
+
+.title{
+  font-size:18px;
+  font-weight:bold;
+}
+
+.desc{
+  font-size:12px;
+  opacity:0.7;
+  margin-top:5px;
+}
 </style>
 </head>
 
@@ -201,6 +241,37 @@ Daftar Sekarang 🚀
 <div class="time-box"><span id="seconds">0</span><small>Detik</small></div>
 </div>
 
+</section> 
+  
+  <h3>Pilih Kategori Lari</h3>
+
+<div class="categories">
+  <div class="box" onclick="selectBox(this)">
+    <div class="title">Kids Dash</div>
+    <div class="desc">Untuk Anak</div>
+  </div>
+
+  <div class="box" onclick="selectBox(this)">
+    <div class="title">Fun Walk</div>
+    <div class="desc">Santai</div>
+  </div>
+
+  <div class="box" onclick="selectBox(this)">
+    <div class="title">5K</div>
+    <div class="desc">Pemula</div>
+  </div>
+
+  <div class="box" onclick="selectBox(this)">
+    <div class="title">10K</div>
+    <div class="desc">Menengah</div>
+  </div>
+
+  <div class="box" onclick="selectBox(this)">
+    <div class="title">24K</div>
+    <div class="desc">Pro</div>
+  </div>
+</div>
+  
 </section>
 
 <footer class="footer">
